@@ -1,3 +1,3 @@
 #! /bin/bash
 
-curl  https://api.github.com/user/70  | grep '"name"' | cut -d : -f 2 | cut -d, -f1 | cut -d " " -f2
+curl https://raw.githubusercontent.com/kigiri/superhero-api/master/api/all.json  | jq '.[]  | select(.id==70 ) | .name '

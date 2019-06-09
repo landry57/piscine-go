@@ -1,3 +1,3 @@
 #! /bin/bash
 
-curl https://api.github.com/users | jq ' .[] | select( .id ==  47279096 ) | .id ' 
+curl  https://api.github.com/users/landry57  | grep '"id"' | cut -d : -f 2 | cut -d, -f1 | cut -d " " -f2

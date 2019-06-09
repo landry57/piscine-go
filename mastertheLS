@@ -1,1 +1,1 @@
-ls  -t -F -m
+ls -tFm |sed -r "s/\t//ig"
